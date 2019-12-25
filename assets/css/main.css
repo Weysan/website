@@ -1,0 +1,90 @@
+/* header */
+header {
+    text-align: center;
+    border-bottom: 1px solid darkgrey;
+    background-image: url("./../images/raphael_background.jpg");
+    background-size: cover;
+    background-position: right top;
+}
+header h1 {
+    padding-top: 20%;
+}
+header h1, header h2 {
+    color: white;
+}
+/* content */
+article {
+    background-color: darkgrey;
+    color: white;
+    padding: 2% 10%;
+}
+
+ul.job-experience {
+    padding-top: 5%;
+    list-style: none;
+}
+ul.job-experience li {
+    padding-top: 10px;
+}
+
+ul.table {
+    display: table;
+    color: white;
+}
+li.table-row {
+    display: table-row;
+}
+span.table-cell {
+    display: table-cell;
+}
+span.job-time {
+    font-style: italic;
+}
+
+.job-company {
+    font-weight: bold;
+}
+
+ul.follow-me {
+    display: block;
+    list-style: none;
+    float:left;
+    width: 100%;
+}
+ul.follow-me li {
+    float: left;
+    padding-right: 1%;
+}
+
+/* footer */
+footer {
+    background-color: gray;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 1% 10% 5% 10%;
+}
+footer a, footer a:hover {
+    color: #fff;
+}
+
+
+/* mobile */
+@media (max-width: 576px) {
+    footer {
+        padding: 1% 1% 5%;
+    }
+    article {
+        padding: 2%;
+    }
+}
+@media (max-width: 768px) {
+    ul.table {
+        display: block;
+    }
+    li.table-row {
+        display: block;
+    }
+    span.table-cell {
+        display: block;
+    }
+}
