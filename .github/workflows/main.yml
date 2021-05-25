@@ -38,6 +38,12 @@ jobs:
       - name: Add git remote to project
         run: git remote add gandi git+ssh://${{ secrets.GANDI_SERVER }}/${{ secrets.GANDI_GIT_REPO }}
         
+      - name : Debug
+        run: ls -al ~/.ssh/
+        
+      - name : Debug 2
+        run: git remote -v
+        
       - name: Push to Gandi
         run: git push gandi master
         
