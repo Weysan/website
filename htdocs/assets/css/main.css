@@ -2,7 +2,7 @@
 header {
     text-align: center;
     border-bottom: 1px solid darkgrey;
-    background-image: url("./../images/raphael_background.jpg");
+    background-image: url("../images/raphael_background.jpg");
     background-size: cover;
     background-position: right top;
 }
