@@ -28,7 +28,7 @@ jobs:
         with:
           key: ${{ secrets.GANDI_SSH_KEY }}
           name: id_rsa # optional
-          known_hosts: unnecessary
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
           if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
 
       # Runs a single command using the runners shell
