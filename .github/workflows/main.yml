@@ -44,8 +44,8 @@ jobs:
       - name: Push to Gandi
         run: git push gandi master -f
         
-       - name: Clean repo before deploy
-         run: ssh ${{ secrets.GANDI_SERVER }} clean ${{ secrets.GANDI_GIT_REPO }}
-        
-       - name: Deploy version
-         run: ssh ${{ secrets.GANDI_SERVER }} deploy ${{ secrets.GANDI_GIT_REPO }}
+      - name: Clean repo before deploy
+        run: ssh ${{ secrets.GANDI_SERVER }} clean ${{ secrets.GANDI_GIT_REPO }}
+
+      - name: Deploy version
+        run: ssh ${{ secrets.GANDI_SERVER }} deploy ${{ secrets.GANDI_GIT_REPO }}
