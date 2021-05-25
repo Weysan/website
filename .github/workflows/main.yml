@@ -24,11 +24,17 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Check if git is available
-        run: git --version
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Configure git in action
+        run: git config --global user.email "${{ secrets.GANDI_GIT_EMAIL }}" && git config --global user.name "${{ secrets.GANDI_GIT_USER_NAME }}"
+        
+      - name: Add git remote to project
+        run: git remote add gandi git+ssh://${{ secrets.GANDI_SERVER }}/${{ secrets.GANDI_GIT_REPO }}
+        
+      - name: Push to Gandi
+        run: git push gandi master
+        
+#       - name: Clean repo before deploy
+#         run: ssh ${{ secrets.GANDI_SERVER }} clean ${{ secrets.GANDI_GIT_REPO }}
+        
+#       - name: Deploy version
+#         run: ssh ${{ secrets.GANDI_SERVER }} deploy ${{ secrets.GANDI_GIT_REPO }}
