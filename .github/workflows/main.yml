@@ -38,6 +38,9 @@ jobs:
       - name: Add git remote to project
         run: git remote add gandi git+ssh://${{ secrets.GANDI_SERVER }}/${{ secrets.GANDI_GIT_REPO }}
         
+      - name: Unshallow github repo
+        run: git fetch --unshallow origin
+        
       - name: Push to Gandi
         run: git push gandi master -f
         
